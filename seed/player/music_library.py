@@ -17,3 +17,12 @@ class MusicLibrary:
 
     def all(self):
         return self.trackList
+
+from dataclasses import dataclass
+
+@dataclass
+class Track:
+    """Class for keeping track of song data."""
+    title: str
+    artist: str
+    file: str

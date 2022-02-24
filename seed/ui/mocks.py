@@ -71,3 +71,13 @@ class TestingConsoleIO:
 
     def is_done(self):
         return self.expected == []
+
+
+class MockSubprocess:
+    def __init__(self):
+        self.called = False
+        self.args = None
+
+    def call(self, args):
+        self.called = True
+        self.args = args
